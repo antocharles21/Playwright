@@ -1,0 +1,54 @@
+{
+  "checkboxes": {
+    "route": "/checkboxes",
+    "initialStates": [false, true],
+    "toggleLabel": "Checkbox 1"
+  },
+  "dropdown": {
+    "route": "/dropdown",
+    "optionLabel": "Option 2"
+  },
+  "addRemoveElements": {
+    "route": "/add-remove-elements",
+    "addButton": "Add Element",
+    "deleteButton": "Delete"
+  },
+  "keyPresses": {
+    "route": "/key-presses",
+    "key": "a",
+    "result": "You entered: A"
+  },
+  "statusCodes": {
+    "route": "/status-codes/200",
+    "statusCode": "200",
+    "responseText": "This page returned a 200 status code."
+  },
+  "tables": {
+    "route": "/tables",
+    "email": "jdoe@hotmail.com",
+    "rowText": "Doe Jason jdoe@hotmail.com $100.00"
+  },
+  "hovers": {
+    "route": "/hovers",
+    "profileIndex": 0,
+    "profileLink": "View profile"
+  },
+  "dynamicControls": {
+    "route": "/dynamic-controls",
+    "removeButton": "Remove",
+    "removedMessage": "It's gone!"
+  },
+  "dynamicLoading": {
+    "route": "/dynamic-loading/1",
+    "startButton": "Start",
+    "loadedMessage": "Hello World!"
+  },
+  "notificationMessage": {
+    "route": "/notification-message",
+    "reloadLink": "Click here",
+    "messages": [
+      "Action successful",
+      "Action unsuccessful, please try again"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "bddgen": "bddgen",
+    "test": "bddgen && playwright test",
+    "test:bdd": "bddgen && playwright test --project=chromium --project=firefox --project=webkit --workers=1",
+    "test:bddChromium": "bddgen && playwright test --project=chromium --headed --workers=3",
+    "test:bddFirefox": "bddgen && playwright test --project=firefox --workers=1",
+    "test:bddWebkit": "bddgen && playwright test --project=webkit --workers=1",
+    "test:headed": "bddgen && playwright test --headed",
+    "test:ui": "bddgen && playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.4",
+    "playwright-bdd": "^9.2.1"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    
+    {
+      "name": "Run practice-site BDD tests (Chromium)",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
+        "test",
+        "--project=chromium",
+        "--workers=1"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "preLaunchTask": "Generate Playwright BDD tests",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+    {
+      "name": "Debug practice-site BDD tests (Chromium)",
+      "type": "pwa-node",
+      "request": "launch",
+      "program": "${workspaceFolder}/node_modules/@playwright/test/cli.js",
+      "args": [
+        "test",
+        "--project=chromium",
+        "--workers=1",
+        "--debug"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "preLaunchTask": "Generate Playwright BDD tests",
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    }
+  ]
+}
