@@ -48,7 +48,14 @@ The target URL defaults to `https://practice.expandtesting.com`; override it
 with the `BASE_URL` environment variable when needed.
 
 The default `npm test` command generates the BDD tests before running the
-complete suite, including the existing example and utility tests.
+complete suite across all configured browser projects. This includes the BDD
+features in Chromium, Firefox, and WebKit, plus all `*.spec.ts` tests in
+`tests/` through the corresponding `*-support` projects. To run only the BDD
+tests, use `npm run test:bdd`. To run all Chromium tests, use:
+
+```sh
+npm test -- --project=chromium --project=chromium-support
+```
 
 ## Run and debug from VS Code
 

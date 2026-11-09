@@ -1,9 +1,11 @@
 import { expect } from '@playwright/test';
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
 import { createBdd } from 'playwright-bdd';
+import exampleDataJson from '../../../Data/expandtesting.json';
 
 interface ExampleData {
+  assertionsShouldBe: {
+    route: string;
+  };
   checkboxes: {
     route: string;
     initialStates: boolean[];
@@ -55,9 +57,7 @@ interface ExampleData {
   };
 }
 
-const exampleData = JSON.parse(
-  readFileSync(join(process.cwd(), 'Data', 'expandtesting.json'), 'utf8'),
-) as ExampleData;
+const exampleData = exampleDataJson as ExampleData;
 
 type ExampleName = keyof ExampleData;
 
@@ -81,6 +81,11 @@ Then('the default checkbox states should match the JSON data', async ({ page }) 
       page.getByRole('checkbox', { name: `Checkbox ${index + 1}` }),
     ).toBeChecked({ checked });
   }
+});
+
+Then('the page title should contain {string}', async ({ page }, expectedTitle: string) => {
+  const escapedTitle = expectedTitle.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  await expect(page).toHaveTitle(new RegExp(escapedTitle));
 });
 
 When('I select the configured checkbox', async ({ page }) => {

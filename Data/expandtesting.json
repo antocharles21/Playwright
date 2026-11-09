@@ -1,4 +1,7 @@
 {
+  "assertionsShouldBe": {
+    "route": "/assertions/should-be"
+  },
   "checkboxes": {
     "route": "/checkboxes",
     "initialStates": [false, true],

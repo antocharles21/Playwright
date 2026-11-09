@@ -48,7 +48,7 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
+     {
       name: 'firefox',
       testDir: bddTestDir,
       use: { ...devices['Desktop Firefox'] },
@@ -63,21 +63,21 @@ export default defineConfig({
     {
       name: 'chromium-support',
       testDir: './tests',
-      testMatch: ['**/example.spec.ts', '**/utils.spec.ts'],
+      testMatch: ['**/*.spec.ts'],
       use: { ...devices['Desktop Chrome'] },
     },
 
     {
       name: 'firefox-support',
       testDir: './tests',
-      testMatch: ['**/example.spec.ts', '**/utils.spec.ts'],
+      testMatch: ['**/*.spec.ts'],
       use: { ...devices['Desktop Firefox'] },
     },
 
     {
       name: 'webkit-support',
       testDir: './tests',
-      testMatch: ['**/example.spec.ts', '**/utils.spec.ts'],
+      testMatch: ['**/*.spec.ts'],
       use: { ...devices['Desktop Safari'] },
     },
 
